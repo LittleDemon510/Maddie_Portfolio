@@ -1,0 +1,193 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a8c0ff, #3f2b96); /* Soft blue gradient */
+    color: white;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.nav-btn {
+    background: #357ec7; /* Soft blue */
+    color: white;
+    padding: 12px 18px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #235a8a; /* Deeper blue */
+    transform: scale(1.1);
+}
+
+.transparent-box {
+    background-color: rgba(247, 247, 247, 0.3); /* Black with 30% transparency */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.text-outline {
+    text-shadow: 
+        -1px -1px 0 rgba(84, 89, 179, 0.895),  
+        1px -1px 0 rgba(84, 89, 179, 0.895),
+        -1px 1px 0 rgba(84, 89, 179, 0.895),
+        1px 1px 0 rgba(84, 89, 179, 0.895);
+}
+/* About Me Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#about .image {
+    flex: 1;
+    background: url('SwDev.jpg') center/cover no-repeat;
+    height: 100%;
+}
+
+#about .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-left: 2px solid #357ec7;
+    height: 80vh;
+    max-height: 80vh;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-family: "Inter", "Lato", "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+#projects h3 {
+    color: #022950;
+    margin-bottom: 15px;
+}
+
+#projects ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#projects li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #010101;
+}
+
+#projects p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Contact Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #0a0a0a;
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #d2e3f5;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #a2dda4;
+    text-decoration: underline;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Content Sections */
+#content {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+  
+    border-radius: 10px;
+    margin: auto;
+    border: none; 
+    box-shadow: none;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute; /* Keeps sections from stacking */
+    top: 10;  /* Ensures all sections start from the same position */
+    left: 0;
+    width: 100%; /* Makes sure it takes full width */
+    height: 70%; /* Occupies the same space */
+}
+
+
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
