@@ -1,34 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maddie's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f8f9fa;
-        }
-        #start-screen {
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maddie's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-    <div id="start-screen" class="container">
-        <h1 class="mb-4">Welcome to Maddie's World</h1>
-        <button id="start-btn" class="btn btn-primary btn-lg">Start</button>
-    </div>
 
-    <script>
-        document.getElementById("start-btn").addEventListener("click", function() {
-            window.location.href = "Portfolio.html";
-        });
-    </script>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <a class="navbar-brand font-weight-bold text-primary" href="#">Maddie</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-label="Toggle nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item"><button class="nav-link btn btn-link" data-target="about">About Me</button></li>
+        <li class="nav-item"><button class="nav-link btn btn-link" data-target="projects">Projects</button></li>
+        <li class="nav-item"><button class="nav-link btn btn-link" data-target="contact">Contact</button></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <!-- About Section -->
+    <section id="about" class="content-section mt-5">
+      <div class="container card p-4 shadow-sm">
+        <h2 class="text-primary text-center mb-4">About Me</h2>
+        <div class="text-center mb-4">
+          <img src="SwDev.jpg" alt="Maddie Photo" class="img-rectangle border border-primary" width="300" height="167">
+        </div>
+        <p><strong>Hi, I’m Maddie — a curious, data driven developer with a passion for building intelligent, scalable systems.</strong></p>
+              
+        <p>I bring together technical depth and business intuition, grounded in a Master’s in International Management (SRH University Berlin) and a Bachelor’s in Computer Science Engineering.</p>
+    
+        Most recently, I completed a full-time internship in Data Science at Vodafone Germany, where I:
+              
+        <p><ol><li>Automated data generation for AI training using Python</li>
+        
+            <li>Integrated AWS Textract for OCR-based PDF processing</li>
+        
+            <li>Led a team-level AI Workshop introducing foundational and generative AI concepts</li>
+        
+            <li>Designed and built a comprehensive capacity planning application for agile teams. The application featured:
+
+              <ul><li>Embedded Power BI dashboards for real-time data visualization</li>
+        
+              <li>Interactive Power Apps interface tailored to different user roles</li>
+              
+              <li>Power Automate integration to schedule live data refreshes</li>
+              
+              <li>Snowflake backend for structured, scalable data management </li></ul></li></ol>               
+        <p> Before that, I worked in Agile IT Delivery, supporting large-scale Scrum ceremonies, improving workflows in tools like Jira and Confluence, and communicating tool/process updates to over 1,000 employees in both English and German.
+        
+        Earlier, I contributed to backend development and web optimization during an internship at Spinox Innovations in India, improving UI performance and site speed across a food delivery platform.</p>
+    </p>
+        <p><strong>🛠 Tech Stack </strong>
+          <ul>
+              <li><strong>Languages & Frameworks:</strong> Python (pandas, requests, openpyxl, etc.), JavaScript, PHP, SQL, R, C</li>
+              
+              <li><strong>Cloud & Infrastructure:</strong> AWS (Textract, S3, Lambda – learning), Docker (learning)</li>
+              
+              <li><strong>Data & Tools:</strong> Power BI, Power Apps, Power Automate</li>
+
+              <li><strong>Tools & Platforms:</strong> Jupyter, Git, VS Code</li>
+
+              <li><strong>Big Data & Distributed Systems:</strong> Apache Spark (PySpark), Hadoop (HDFS), Apache Hive (basic understanding)</li>
+              
+              <li><strong>Automation:</strong> Postman, API Integration</li>
+              
+              <li><strong>Project Management:</strong> Agile, Scrum, Jira, Confluence</li>
+              
+              <li><strong>Certifications:</strong> AWS Cloud Practitioner Essentials (in progress), Google Agile Project Management, McKinsey Forward Program</li>
+              
+              <li><strong>Languages Spoken:</strong> English (C2), German (C1), Hindi (C2)</li>
+            </ul>
+      </p>
+      <p>
+          <strong>🚀 What I’m Looking For:</strong>
+          I'm actively seeking full-time roles in Data Science, Backend Development, or hybrid roles that allow me to create, automate, and contribute to impactful digital systems. I’m especially drawn to roles where I can work with data, build scalable infrastructure, and grow into product-minded tech leadership.
+      </p>
+      <p><strong> 🌱A Little More About Me:</strong>
+          When I’m not coding, I’m often learning something new—currently AWS and Data Sciences—or relaxing with a good chess match. I love discovering tools and technologies that bring structure and clarity to complex problems.</p>
+      
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section hidden">
+      <div class="container">
+        <h2 class="text-primary text-center mb-4">Projects</h2>
+        <!-- Project 1 Card -->
+        <div class="card mb-4 shadow-sm p-3">
+          <h4 class="text-outline"><strong>Automated training data creation & email categorisation</strong></h4>
+          <div class="project-callout"><p>Independently developed a Python automation script to support the training of a machine learning model used for automatic email categorization, at Vodafone. The goal of the model was to help the business route customer queries more efficiently, especially during a time of increasing complaint volume and limited staffing.</p></div>
+          <h5><strong>Key Contributions:</strong></h5>
+          <div class="transparent-box"><ul>
+            <li><b>Automated Data Extraction & Processing:</b> Independently developed Python scripts to parse and extract key metadata from email folders and subfolders — capturing subject lines, message bodies, invoice numbers, and more.</li>
+            <li><b>Attachment Handling & Data Integrity:</b> Added logic to process attachments (PDF, JPG, PNG) and implemented duplicate detection to ensure clean, consistent training data.</li>
+            <li><b>Excel Data Preprocessing:</b> Used Python and Pandas to extract and structure operational data from Excel files into AI-ready datasets.</li>
+            <li><b>Support for AI Model Training:</b> Prepared and delivered high-quality, structured datasets for integration into a Pega Infinity-based email categorization model.</li>
+            <li><b>Business Impact:</b> Model training revealed 8 top-performing categories (out of 16), which became the business focus for rollout — improving accuracy, reducing manual email triage, and accelerating deployment.</li>
+          </ul>
+          <p><b>GitHub Repository: </b><a href="https://github.com/LittleDemon510/MSG-File-Handler-and-OCR-Processor/blob/main/msg_file_handler.py">MSG-File-Handler-and-OCR-Processor</a></p></div>
+      </div>
+        <div class="card mb-4 shadow-sm p-3">
+          <h4 class="text-outline"><b>Capacity Management Tool for Agile Teams</b></h4>
+          <p>
+            Developed a fully integrated capacity management tool for over 70 users at Vodafone Germany, replacing fragmented, Excel-based planning with a centralized application built on Microsoft PowerApps, Power BI, and Power Automate. The tool was designed to simplify complex sprint planning workflows across multiple agile teams—without compromising flexibility, data security, or usability.
+          </p>
+        
+          <h5><b>💡 Key Highlights</b></h5>
+          <ul>
+            <li>Architected a multi-layered application that connected UI, live databases, and analytics pipelines through custom logic and service automation.</li>
+            <li>Integrated PowerApps with SharePoint as a dynamic backend and Power BI for cross-filtered, role-specific capacity dashboards.</li>
+            <li>Embedded the solution into Microsoft Teams, streamlining user adoption while maintaining access control and data integrity.</li>
+            <li>Handled stakeholder needs across roles—Scrum Masters, LSAs, RTEs, developers, testers—through iterative design and feedback loops.</li>
+          </ul>
+         <!-- Image: System Architecture -->
+          <figure>
+            <img src="Infrastructure.png" alt="System Architecture Diagram" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px;">
+            <figcaption><i>System Architecture: Data & App Integration Flow</i></figcaption>
+          </figure>
+          <h5><b>🧩 Key Features</b></h5>
+          <ul>
+            <li><b>Data Modeling – Snowflake Schema:</b> Designed a dimensional fact model with normalized relationships for storing teams, roles, leaves, Program Increments (PIs), and calendar data.</li>            <figure>
+              <img src="Data_model.png" alt="Snowflake Schema Model" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px;">
+              <figcaption><i>Snowflake Schema: Backend Data Structure</i></figcaption>
+            </figure>
+            <li><b>Teradata-Sourced Holiday Intelligence:</b> Imported and integrated 20 years of calendar data from Vodafone’s enterprise Teradata system. The dataset includes all regional public holidays across India and Germany.</li>
+            <li><b>Automated Leave Recognition:</b> The tool cross-references user location and calendar data to automatically apply public holidays as non-working days for relevant users—removing the need for manual holiday checks and reducing planning inconsistencies across geographies.</li>
+            <li><b>User Interface & Access Control:</b> 
+              <ul>
+                <li>Built 12 interactive PowerApps screens with layered conditional logic and dynamic rendering based on user role.</li>
+                <li>Automated login system tied to Microsoft identity, assigning views and permissions based on database-defined roles.</li>
+              </ul>
+            </li>
+        
+            <li><b>Scrum Master Tools:</b> 
+              <ul>
+                <li>Full control over PIs, team composition, and historical planning data.</li>
+                <li>Live capacity dashboard combining submitted leave data with planned work estimates.</li>
+                <li>Access a dedicated <b>calendar view of all team leave records</b>, built in Power BI, to support clear and visual sprint planning without manual cross-checking.</li>
+                <!-- Image: Calendar View -->
+                <figure>
+                  <img src="Calender_view.png" alt="Calendar View" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px;">
+                  <figcaption><i>Power BI Dashboard: Calender View</i></figcaption>
+                </figure>
+              </ul>
+            </li>
+        
+            <li><b>Developer & Tester View:</b> 
+              <ul>
+                <li>Simplified interface for leave submissions with pre-filled user metadata.</li>
+                <figure>
+                  <img src="Leave_Dashboard.png" alt="Developer View" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px;">
+                  <figcaption><i>PowerApps – Developer Leave Submission</i></figcaption>
+                </figure>
+                <li>Automated updates to team capacity calculations on submission, reducing manual errors.</li>
+              </ul>
+            </li>
+        
+            <li><b>Real-Time Reporting & Automation:</b>
+              <ul>
+                <li>Custom Power Automate flows to refresh data and sync records across SharePoint and Power BI.</li>
+                 <!-- Image: Power Automate Flow -->
+                  <figure>
+                    <img src="PowerAutomate.png" alt="Power Automate Flow" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px;">
+                    <figcaption><i>Power Automate Flow: Automated Data Sync</i></figcaption>
+                  </figure>
+                <li>Data visualizations updated in real-time to reflect changing team conditions and resource availability.</li>
+              </ul>
+               <!-- Image: Power BI Dashboard -->
+              <figure>
+                <img src="availability_percentage_calculator.png" alt="Power BI Dashboard" class="img-fluid" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <figcaption><i>Power BI Dashboard: Team Capacity Overview</i></figcaption>
+              </figure>
+            </li>
+          </ul>
+        
+          <p>
+            The application is currently in beta and actively used across the department. It has dramatically reduced manual planning time, improved accuracy in capacity tracking, and introduced a repeatable framework for scaled agile planning. Built to solve a domain-specific need, this tool bridges process, people, and data in a single, maintainable system.
+          </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section hidden">
+      <div class="container text-center">
+        <h2 class="text-primary mb-4">Contact Me</h2>
+        <p>Email: <a href="mailto:madhumitha.raj510@gmail.com">madhumitha.raj510@gmail.com</a></p>
+        <p>Mob: +491622649096</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/madhumitha-rajagopal/" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/LittleDemon510" target="_blank">GitHub</a>
+        </div>
+        <p></p>
+        <p><strong>📄 Resume:</strong> <a href="Resume - europass.pdf" download>Download PDF</a></p>
+        <p></p>
+        <p><em>I’m always happy to connect — whether it’s about a role, a project, or just to talk about AI, automation, or chess over a cup of coffee ☕</em></p>
+        <form action="https://formspree.io/f/mrbkpeol" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required class="form-control mb-2">
+          <input type="email" name="_replyto" placeholder="Your Email" required class="form-control mb-2">
+          <textarea name="message" placeholder="Your Message" rows="4" required class="form-control mb-3"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        
+      </div>
+    </section>
+
+  </div>
+
+  
 </body>
 </html>
-
